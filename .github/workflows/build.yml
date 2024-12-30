@@ -14,7 +14,7 @@ jobs:
     steps:
     - name: "Clone Repository"
       run: |
-        git clone https://github.com/KreitinnSoftware/MiceWine-RootFS-Generator
+        git clone https://github.com/Fartopblu/MiceWine-RootFS-Generator
 
     - name: "Environment Preparation"
       run: |
@@ -33,7 +33,7 @@ jobs:
     - name: "Download Latest Release Rat Packages"
       run: |
         cd MiceWine-RootFS-Generator
-        curl -LO# $(curl -s https://api.github.com/repos/KreitinnSoftware/MiceWine-RootFS-Generator/releases/latest | grep "MiceWine-Packages.zip" | grep "browser_download_url" | sed "s/\"browser_download_url\"://g" | sed "s/\"//g") || true
+        curl -LO# $(curl -s https://api.github.com/repos/Fartopblu/MiceWine-RootFS-Generator/releases/latest | grep "MiceWine-Packages.zip" | grep "browser_download_url" | sed "s/\"browser_download_url\"://g" | sed "s/\"//g") || true
         unzip -o MiceWine-Packages.zip -d built-pkgs || true
 
     - name: "Start Building (x86_64)"
@@ -52,7 +52,7 @@ jobs:
     - name: "Clean (x86_64) RootFS"
       run: |
         cd MiceWine-RootFS-Generator
-        sudo rm -rf /data/data/com.micewine.emu/files/usr workdir rootfs
+        sudo rm -rf /data/data/com.termux/files/usr workdir rootfs
 
     - name: "Start Building (aarch64)"
       run: |

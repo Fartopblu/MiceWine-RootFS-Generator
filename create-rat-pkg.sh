@@ -30,7 +30,7 @@ symlink2sh() {
 }
 
 export INIT_DIR=$PWD
-export APP_ROOT_DIR=/data/data/com.micewine.emu/
+export APP_ROOT_DIR=/data/data/com.termux/
 
 export PACKAGE_NAME=$1
 export PACKAGE_PRETTY_NAME=$2
@@ -52,7 +52,7 @@ echo "Creating Package '$PACKAGE_NAME-$PACKAGE_VERSION-$PACKAGE_ARCHITECTURE.rat
 export WORKDIR="$DESTDIR_PKG"
 
 if [ -d "$DESTDIR_PKG/data/" ]; then
-	WORKDIR="$DESTDIR_PKG/data/data/com.micewine.emu/"
+	WORKDIR="$DESTDIR_PKG/data/data/com.termux/"
 fi
 
 cd $WORKDIR
