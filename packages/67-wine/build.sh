@@ -4,8 +4,8 @@ PKG_PRETTY_NAME="Wine ($PKG_VER)"
 
 BLACKLIST_ARCHITECTURE=aarch64
 
-GIT_URL=https://github.com/KreitinnSoftware/wine
-GIT_COMMIT=bdb163ff7b147d3bcce9728ba5572d1496b2753d
+GIT_URL=https://github.com/Fartopblu/wine
+GIT_COMMIT=ba1fcc55af3e027aa083f5c18382985ca1af28a5
 HOST_BUILD_CONFIGURE_ARGS="--enable-win64 --without-x"
 HOST_BUILD_FOLDER="$INIT_DIR/workdir/$package/wine-tools"
 HOST_BUILD_MAKE="make -j $(nproc) __tooldeps__ nls/all"
