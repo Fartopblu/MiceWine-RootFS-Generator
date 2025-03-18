@@ -35,9 +35,6 @@ Vulkan-Loader
 Vulkan-Volk
 Vulkan-Tools
 libglvnd
-GLU
-FreeGLUT
-mesa-demos
 libiconv
 libunistring
 openssl
